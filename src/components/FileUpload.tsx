@@ -79,10 +79,10 @@ const FileUpload: React.FC = () => {
       // Replace 'your-api-endpoint' with your actual API endpoint
       await axios.post(
         "https://invoice-generator.com",
+        data[0],
         {
           headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" },
-        },
-        data
+        }
       );
     } catch (error) {
       throw new Error("Failed to send data to API");
